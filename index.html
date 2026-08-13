@@ -9,13 +9,15 @@
   <link rel="stylesheet" href="typography.css">
   <link rel="stylesheet" href="y2k.css">
   <link rel="stylesheet" href="result.css">
+  <link rel="stylesheet" href="forbidden.css">
+  <link rel="stylesheet" href="forbidden-hint.css">
 </head>
 <body>
   <main class="app">
     <header><a class="logo" href="."><span>◈</span> NEON<span class="dim">/GRID</span></a><button id="reset-score" class="ghost">Reset scores</button></header>
     <div class="layout">
       <section class="game-panel">
-        <div class="intro"><p class="kicker">TACTICAL PLAY // 001</p><h1>Tic—Tac—Toe</h1><p class="hint">Three marks. One winning line.</p></div>
+        <div class="intro"><p class="kicker">TACTICAL PLAY // 001</p><h1>Tic—Tac—Toe</h1><p class="hint">Three marks. One winning line.</p><p class="forbidden-hint">Watch your move: one hidden box is forbidden.</p></div>
         <div class="mode-toggle" role="group" aria-label="Game mode"><button class="mode active" data-mode="single">Single player</button><button class="mode" data-mode="multi">Two players</button></div>
         <div id="player-selectors" hidden><label>Player 1 <select id="player-one-select"></select></label><label>Player 2 <select id="player-two-select"></select></label></div>
         <div class="turn" aria-live="polite"><i></i><span id="status-text">Your turn · X</span></div>

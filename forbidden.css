@@ -1,0 +1,1 @@
+.cell.forbidden{background:#ff4c9d;color:#160d31;border-color:#ffb1dc;box-shadow:0 0 18px #ff4c9d,0 0 42px #ff4c9d99;animation:forbidden-pulse .7s ease-in-out infinite alternate}@keyframes forbidden-pulse{from{transform:scale(1)}to{transform:scale(.96);filter:brightness(1.35)}}
