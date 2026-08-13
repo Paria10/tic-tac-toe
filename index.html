@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Grid — Tic-Tac-Toe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header><a class="logo" href="."><span>◈</span> NEON<span class="dim">/GRID</span></a><button id="reset-score" class="ghost">Reset scores</button></header>
+    <div class="layout">
+      <section class="game-panel">
+        <div class="intro"><p class="kicker">TACTICAL PLAY // 001</p><h1>Tic—Tac—Toe</h1><p class="hint">Three marks. One winning line.</p></div>
+        <div class="mode-toggle" role="group" aria-label="Game mode"><button class="mode active" data-mode="single">Single player</button><button class="mode" data-mode="multi">Two players</button></div>
+        <div id="player-selectors" hidden><label>Player 1 <select id="player-one-select"></select></label><label>Player 2 <select id="player-two-select"></select></label></div>
+        <div class="turn" aria-live="polite"><i></i><span id="status-text">Your turn · X</span></div>
+        <div class="board" role="grid" aria-label="Tic-Tac-Toe board">
+          <button class="cell" data-index="0" aria-label="Top left, empty"></button><button class="cell" data-index="1" aria-label="Top center, empty"></button><button class="cell" data-index="2" aria-label="Top right, empty"></button>
+          <button class="cell" data-index="3" aria-label="Middle left, empty"></button><button class="cell" data-index="4" aria-label="Center, empty"></button><button class="cell" data-index="5" aria-label="Middle right, empty"></button>
+          <button class="cell" data-index="6" aria-label="Bottom left, empty"></button><button class="cell" data-index="7" aria-label="Bottom center, empty"></button><button class="cell" data-index="8" aria-label="Bottom right, empty"></button>
+        </div>
+        <button id="new-round" class="primary">New round <span>↗</span></button>
+      </section>
+      <aside class="side-panel">
+        <div class="panel-heading"><p class="kicker">PLAYER REGISTRY</p><span class="online"><i></i> ONLINE</span></div>
+        <form id="signup-form"><label for="player-name">Add a new player</label><div class="signup-row"><input id="player-name" maxlength="18" autocomplete="off" placeholder="Enter your name…"><button type="submit" aria-label="Add player">+</button></div><small id="form-message" aria-live="polite">Your name will appear on the board.</small></form>
+        <div class="leader-heading"><span>LEADERBOARD</span><span>WINS</span></div><ol id="leaderboard"></ol>
+        <div class="legend"><span><b class="legend-x">×</b> You</span><span><b class="legend-o">○</b> Opponent</span></div>
+      </aside>
+    </div>
+    <footer><span>CALM MIND · SHARP PLAY</span><span>ROUND <b id="round-number">01</b></span></footer>
+  </main>
+  <script src="script.js"></script>
+</body></html>
